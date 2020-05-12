@@ -23,4 +23,8 @@ public class RegistrationController {
 
     private Person person;
 
+    public void savePerson(){
+
+    }
+
 }
