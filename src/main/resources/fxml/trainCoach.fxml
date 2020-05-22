@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: wight;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1081.0" layoutX="178.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/train_coach.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="382.0" prefHeight="42.0" prefWidth="517.0" text="Please select one or more seats">
+         <font>
+            <Font name="Arial" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveButton" layoutX="368.0" layoutY="752.0" mnemonicParsing="false" style="-fx-background-color: LawnGreen; -fx-border-color: black; -fx-border-radius: 3;" text="Save selected seats">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="-193.0" layoutY="330.0" text="Label" />
+      <Label layoutX="7.0" layoutY="49.0" text="User name :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="userName" layoutX="111.0" layoutY="49.0" prefHeight="27.0" prefWidth="750.0" text="name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="logOut" layoutX="899.0" layoutY="752.0" mnemonicParsing="false" style="-fx-background-color: F35454; -fx-border-radius: 3; -fx-border-color: black;" text="LogOut">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <CheckBox layoutX="495.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="495.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="495.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="495.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="535.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="535.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="535.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="535.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="681.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="719.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="681.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="719.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="681.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="681.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="719.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="719.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="870.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="913.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="870.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="913.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="870.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="913.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="870.0" layoutY="175.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="913.0" layoutY="175.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="497.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="497.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="497.0" layoutY="275.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="497.0" layoutY="296.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="537.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="537.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="537.0" layoutY="275.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="537.0" layoutY="296.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="683.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="721.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="683.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="721.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="683.0" layoutY="275.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="683.0" layoutY="296.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="721.0" layoutY="275.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="721.0" layoutY="296.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="872.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="912.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="872.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="912.0" layoutY="232.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="872.0" layoutY="275.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="912.0" layoutY="275.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="872.0" layoutY="294.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="912.0" layoutY="294.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1061.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1061.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="339.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="339.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="344.0" layoutY="92.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1060.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="339.0" layoutY="274.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="339.0" layoutY="295.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="344.0" layoutY="212.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1061.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1061.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1060.0" layoutY="296.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="399.0" layoutY="376.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="440.0" layoutY="376.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="495.0" layoutY="376.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="535.0" layoutY="376.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="588.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="628.0" layoutY="376.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="678.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="721.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="774.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="817.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="870.0" layoutY="378.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="913.0" layoutY="378.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="964.0" layoutY="378.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1004.0" layoutY="378.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1062.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="399.0" layoutY="396.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="440.0" layoutY="396.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="495.0" layoutY="396.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="535.0" layoutY="396.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="588.0" layoutY="394.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="628.0" layoutY="394.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="678.0" layoutY="397.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="721.0" layoutY="397.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="774.0" layoutY="397.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="817.0" layoutY="397.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="870.0" layoutY="398.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="913.0" layoutY="398.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="964.0" layoutY="398.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1004.0" layoutY="398.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1062.0" layoutY="396.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="399.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="440.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="495.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="535.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="588.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="628.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="678.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="721.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="774.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="817.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="870.0" layoutY="441.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="913.0" layoutY="441.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="964.0" layoutY="441.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1004.0" layoutY="441.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="399.0" layoutY="459.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="440.0" layoutY="459.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="495.0" layoutY="459.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="535.0" layoutY="459.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="588.0" layoutY="457.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="628.0" layoutY="457.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="678.0" layoutY="460.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="721.0" layoutY="460.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="774.0" layoutY="460.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="817.0" layoutY="460.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="870.0" layoutY="461.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="913.0" layoutY="461.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="964.0" layoutY="461.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1004.0" layoutY="461.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1057.0" layoutY="461.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="342.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="339.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="339.0" layoutY="459.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="398.0" layoutY="507.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="439.0" layoutY="507.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="494.0" layoutY="507.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="534.0" layoutY="507.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="587.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="627.0" layoutY="507.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="677.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="720.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="773.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="816.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="869.0" layoutY="509.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="912.0" layoutY="509.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="963.0" layoutY="509.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1003.0" layoutY="509.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1061.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="398.0" layoutY="527.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="439.0" layoutY="527.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="494.0" layoutY="527.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="534.0" layoutY="527.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="587.0" layoutY="525.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="627.0" layoutY="525.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="677.0" layoutY="528.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="720.0" layoutY="528.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="773.0" layoutY="528.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="816.0" layoutY="528.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="869.0" layoutY="529.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="912.0" layoutY="529.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="963.0" layoutY="529.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1003.0" layoutY="529.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1061.0" layoutY="527.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="398.0" layoutY="570.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="439.0" layoutY="570.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="494.0" layoutY="570.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="534.0" layoutY="570.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="587.0" layoutY="571.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="627.0" layoutY="570.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="677.0" layoutY="571.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="720.0" layoutY="571.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="773.0" layoutY="571.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="816.0" layoutY="571.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="869.0" layoutY="572.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="912.0" layoutY="572.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="963.0" layoutY="572.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1003.0" layoutY="572.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="398.0" layoutY="590.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="439.0" layoutY="590.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="494.0" layoutY="590.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="534.0" layoutY="590.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="587.0" layoutY="588.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="627.0" layoutY="588.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="677.0" layoutY="591.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="720.0" layoutY="591.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="773.0" layoutY="591.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="816.0" layoutY="591.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="869.0" layoutY="592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="912.0" layoutY="592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="963.0" layoutY="592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1003.0" layoutY="592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1056.0" layoutY="592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="341.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="338.0" layoutY="570.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="338.0" layoutY="590.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="398.0" layoutY="633.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="439.0" layoutY="633.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="494.0" layoutY="633.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="534.0" layoutY="633.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="587.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="627.0" layoutY="633.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="677.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="720.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="773.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="816.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="869.0" layoutY="635.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="912.0" layoutY="635.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="963.0" layoutY="635.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1003.0" layoutY="635.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1061.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="398.0" layoutY="653.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="439.0" layoutY="653.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="494.0" layoutY="653.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="534.0" layoutY="653.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="587.0" layoutY="651.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="627.0" layoutY="651.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="677.0" layoutY="654.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="720.0" layoutY="654.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="773.0" layoutY="654.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="816.0" layoutY="654.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="869.0" layoutY="655.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="912.0" layoutY="655.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="963.0" layoutY="655.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1003.0" layoutY="655.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1061.0" layoutY="653.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="398.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="439.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="494.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="534.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="587.0" layoutY="697.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="627.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="677.0" layoutY="697.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="720.0" layoutY="697.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="773.0" layoutY="697.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="816.0" layoutY="697.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="870.0" layoutY="698.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="963.0" layoutY="698.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1003.0" layoutY="698.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="398.0" layoutY="716.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="439.0" layoutY="716.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="494.0" layoutY="716.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="534.0" layoutY="716.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="587.0" layoutY="714.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="627.0" layoutY="714.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="677.0" layoutY="717.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="720.0" layoutY="717.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="773.0" layoutY="717.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="816.0" layoutY="717.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="870.0" layoutY="715.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="963.0" layoutY="718.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1003.0" layoutY="718.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="1056.0" layoutY="718.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="341.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="338.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="338.0" layoutY="716.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="912.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+      <CheckBox layoutX="912.0" layoutY="713.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+   </children>
+</Pane>
