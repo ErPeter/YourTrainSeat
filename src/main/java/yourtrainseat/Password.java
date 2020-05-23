@@ -7,9 +7,9 @@ package yourtrainseat;
 import lombok.Setter;
 import org.tinylog.Logger;
 
+import javax.xml.bind.DatatypeConverter;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 
 
 public class Password {
@@ -19,36 +19,21 @@ public class Password {
 
     private String secretPassword = null;
 
-    public Password(String password) {
-        this.password = password;
+    public Password() {
     }
 
-    /**
-     * Returns a salt for a hashing algorithm
-     *
-     * @return a salt
-     */
-    private static byte[] getSalt() throws NoSuchAlgorithmException {
-        SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
-        byte[] salt = new byte[16];
-        secureRandom.nextBytes(salt);
-        return salt;
-    }
 
     /**
      * Creating hashed password from password
      */
     private void setSecretPassword() throws NoSuchAlgorithmException {
-        byte[] salt = getSalt();
         try {
-            MessageDigest messageDigest = MessageDigest.getInstance("-1");
-            messageDigest.update(salt);
-            byte[] bytes = messageDigest.digest(this.password.getBytes());
+            MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+            messageDigest.update(password.getBytes());
+            byte[] digest = messageDigest.digest();
             StringBuilder stringBuilder = new StringBuilder();
-            for (byte aByte : bytes) {
-                stringBuilder.append(Integer.toString((aByte & 0xff) + 0x100, 16).substring(1));
-            }
-            this.secretPassword = stringBuilder.toString();
+            String myHash = DatatypeConverter.printHexBinary(digest).toUpperCase();
+            this.secretPassword =myHash;
         } catch (NoSuchAlgorithmException exception) {
             Logger.error("No such algorithm" + exception);
         }

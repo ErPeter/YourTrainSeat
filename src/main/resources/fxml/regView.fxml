@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0"
-      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationController">
    <children>
       <Label layoutX="57.0" layoutY="63.0" text="To create an account please fill the following form">
          <font>
@@ -39,13 +38,13 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button layoutX="260.0" layoutY="411.0" onAction="#savePerson" mnemonicParsing="false" text="Save my account" />
+      <Button layoutX="260.0" layoutY="411.0" mnemonicParsing="false" onAction="#savePerson" text="Save my account" />
       <TextField fx:id="firstName" layoutX="319.0" layoutY="128.0" promptText="First name" />
       <TextField fx:id="lastName" layoutX="319.0" layoutY="178.0" promptText="Last name" />
       <TextField fx:id="userName" layoutX="319.0" layoutY="228.0" promptText="User name" />
       <TextField fx:id="password" layoutX="319.0" layoutY="278.0" promptText="Password" />
       <TextField fx:id="repeatPassword" layoutX="319.0" layoutY="328.0" promptText="Repeat Password" />
       <Label fx:id="userNameAlert" layoutX="313.0" layoutY="255.0" text="This username is already in use" textFill="#d72828" visible="false" />
-      <Label fx:id="passwordAlert" layoutX="320.0" layoutY="353.0" lineSpacing="2.0" prefHeight="44.0" prefWidth="149.0" text="The repeat is deifferent &#10;from the original password" textAlignment="CENTER" textFill="#d72828" visible="false" wrapText="true" />
+      <Label fx:id="passwordAlert" layoutX="320.0" layoutY="353.0" lineSpacing="2.0" prefHeight="44.0" prefWidth="149.0" text="The repeat is deifferent &#10;from the original password" textAlignment="CENTER" textFill="#d72828" wrapText="true" visible="false" />
    </children>
 </Pane>
