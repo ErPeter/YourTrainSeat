@@ -8,13 +8,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import yourtrainseat.PersonDao;
+import yourtrainseat.SignIn;
 
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 
 
 public class SignInController {
-    private PersonDao po = new PersonDao();
+
+    private SignIn signIn = new SignIn();
 
     @FXML
     private TextField userName;
@@ -29,12 +31,20 @@ public class SignInController {
         stage.show();
     }
 
-    public void switchToTrainCoachView(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/trainCoach.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public void switchToTrainCoachView(ActionEvent event) throws IOException, NoSuchAlgorithmException {
+        setSignInValues();
+        if(signIn.successfulLogin()) {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/trainCoach.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+    }
+
+    private void setSignInValues(){
+        signIn.setPwd(password.getText());
+        signIn.setPersonName(userName.getText());
     }
 
 }
