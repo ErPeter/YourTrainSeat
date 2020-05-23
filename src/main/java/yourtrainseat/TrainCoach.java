@@ -1,6 +1,7 @@
 package yourtrainseat;
 
 import javafx.scene.layout.Pane;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
 
 public class TrainCoach {
 
+    @Setter
     private List<Pane> seats;
 
     /**
@@ -23,6 +25,10 @@ public class TrainCoach {
         }
     }
 
+    /**
+     * Method to handel a reservation
+     * @param pane
+     */
     public void reserveSeat(Pane pane){
         if (isReserved(pane)) {
             pane.setStyle("-fx-background-color:  #f35454");
@@ -31,14 +37,16 @@ public class TrainCoach {
             System.out.println("Already reserved");
         }
     }
+
+    /**
+     * Method to check if is a seat already has been reserved
+     * @param pane
+     * @return
+     */
     public boolean isReserved(Pane pane){
         if (pane.getStyle().equals("-fx-background-color:  #F35454")){
             return false;
         }
         return true;
-    }
-
-    public void setSeats(List<Pane> seats) {
-        this.seats = seats;
     }
 }

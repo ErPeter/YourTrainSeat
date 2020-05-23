@@ -8,11 +8,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import yourtrainseat.PersonDao;
 
 import java.io.IOException;
 
 
 public class SignInController {
+    private PersonDao po = new PersonDao();
 
     @FXML
     private TextField userName;

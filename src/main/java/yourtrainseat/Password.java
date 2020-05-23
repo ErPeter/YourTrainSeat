@@ -4,7 +4,7 @@ package yourtrainseat;
  * Class to create safe passwords
  */
 
-import lombok.Getter;
+import lombok.Setter;
 import org.tinylog.Logger;
 
 import java.security.MessageDigest;
@@ -14,9 +14,9 @@ import java.security.SecureRandom;
 
 public class Password {
 
+    @Setter
     private String password;
 
-    @Getter
     private String secretPassword = null;
 
     public Password(String password) {
@@ -52,5 +52,10 @@ public class Password {
         } catch (NoSuchAlgorithmException exception) {
             Logger.error("No such algorithm" + exception);
         }
+    }
+
+    public String getSecretPassword() throws NoSuchAlgorithmException {
+        setSecretPassword();
+        return secretPassword;
     }
 }
