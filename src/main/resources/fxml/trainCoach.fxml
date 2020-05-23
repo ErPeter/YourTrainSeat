@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: wight;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.util.ArrayList?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: wight;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TrainCoachController">
    <children>
       <ImageView fitHeight="700.0" fitWidth="1081.0" layoutX="178.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -21,7 +18,7 @@
             <Font name="Arial" size="36.0" />
          </font>
       </Label>
-      <Button fx:id="saveButton" layoutX="368.0" layoutY="752.0" mnemonicParsing="false" style="-fx-background-color: LawnGreen; -fx-border-color: black; -fx-border-radius: 3;" text="Save selected seats">
+      <Button fx:id="saveButton" layoutX="368.0" layoutY="752.0" mnemonicParsing="false" onAction="#saveButton" style="-fx-background-color: LawnGreen; -fx-border-color: black; -fx-border-radius: 3;" text="Save selected seats">
          <font>
             <Font name="Arial Bold" size="12.0" />
          </font>
@@ -42,251 +39,501 @@
             <Font name="Arial Bold" size="12.0" />
          </font>
       </Button>
-      <CheckBox layoutX="495.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="495.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="495.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="495.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="535.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="535.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="535.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="535.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="681.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="719.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="681.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="719.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="681.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="681.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="719.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="719.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="870.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="913.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="870.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="913.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="870.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="913.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="870.0" layoutY="175.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="913.0" layoutY="175.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="497.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="497.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="497.0" layoutY="275.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="497.0" layoutY="296.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="537.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="537.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="537.0" layoutY="275.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="537.0" layoutY="296.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="683.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="721.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="683.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="721.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="683.0" layoutY="275.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="683.0" layoutY="296.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="721.0" layoutY="275.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="721.0" layoutY="296.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="872.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="912.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="872.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="912.0" layoutY="232.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="872.0" layoutY="275.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="912.0" layoutY="275.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="872.0" layoutY="294.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="912.0" layoutY="294.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1061.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1061.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="339.0" layoutY="155.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="339.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="344.0" layoutY="92.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1060.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="339.0" layoutY="274.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="339.0" layoutY="295.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="344.0" layoutY="212.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1061.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1061.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1060.0" layoutY="296.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="399.0" layoutY="376.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="440.0" layoutY="376.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="495.0" layoutY="376.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="535.0" layoutY="376.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="588.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="628.0" layoutY="376.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="678.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="721.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="774.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="817.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="870.0" layoutY="378.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="913.0" layoutY="378.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="964.0" layoutY="378.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1004.0" layoutY="378.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1062.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="399.0" layoutY="396.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="440.0" layoutY="396.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="495.0" layoutY="396.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="535.0" layoutY="396.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="588.0" layoutY="394.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="628.0" layoutY="394.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="678.0" layoutY="397.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="721.0" layoutY="397.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="774.0" layoutY="397.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="817.0" layoutY="397.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="870.0" layoutY="398.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="913.0" layoutY="398.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="964.0" layoutY="398.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1004.0" layoutY="398.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1062.0" layoutY="396.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="399.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="440.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="495.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="535.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="588.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="628.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="678.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="721.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="774.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="817.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="870.0" layoutY="441.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="913.0" layoutY="441.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="964.0" layoutY="441.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1004.0" layoutY="441.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="399.0" layoutY="459.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="440.0" layoutY="459.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="495.0" layoutY="459.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="535.0" layoutY="459.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="588.0" layoutY="457.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="628.0" layoutY="457.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="678.0" layoutY="460.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="721.0" layoutY="460.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="774.0" layoutY="460.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="817.0" layoutY="460.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="870.0" layoutY="461.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="913.0" layoutY="461.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="964.0" layoutY="461.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1004.0" layoutY="461.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1057.0" layoutY="461.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="342.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="339.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="339.0" layoutY="459.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="398.0" layoutY="507.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="439.0" layoutY="507.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="494.0" layoutY="507.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="534.0" layoutY="507.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="587.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="627.0" layoutY="507.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="677.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="720.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="773.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="816.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="869.0" layoutY="509.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="912.0" layoutY="509.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="963.0" layoutY="509.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1003.0" layoutY="509.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1061.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="398.0" layoutY="527.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="439.0" layoutY="527.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="494.0" layoutY="527.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="534.0" layoutY="527.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="587.0" layoutY="525.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="627.0" layoutY="525.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="677.0" layoutY="528.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="720.0" layoutY="528.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="773.0" layoutY="528.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="816.0" layoutY="528.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="869.0" layoutY="529.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="912.0" layoutY="529.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="963.0" layoutY="529.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1003.0" layoutY="529.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1061.0" layoutY="527.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="398.0" layoutY="570.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="439.0" layoutY="570.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="494.0" layoutY="570.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="534.0" layoutY="570.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="587.0" layoutY="571.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="627.0" layoutY="570.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="677.0" layoutY="571.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="720.0" layoutY="571.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="773.0" layoutY="571.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="816.0" layoutY="571.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="869.0" layoutY="572.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="912.0" layoutY="572.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="963.0" layoutY="572.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1003.0" layoutY="572.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="398.0" layoutY="590.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="439.0" layoutY="590.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="494.0" layoutY="590.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="534.0" layoutY="590.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="587.0" layoutY="588.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="627.0" layoutY="588.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="677.0" layoutY="591.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="720.0" layoutY="591.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="773.0" layoutY="591.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="816.0" layoutY="591.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="869.0" layoutY="592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="912.0" layoutY="592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="963.0" layoutY="592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1003.0" layoutY="592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1056.0" layoutY="592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="341.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="338.0" layoutY="570.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="338.0" layoutY="590.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="398.0" layoutY="633.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="439.0" layoutY="633.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="494.0" layoutY="633.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="534.0" layoutY="633.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="587.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="627.0" layoutY="633.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="677.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="720.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="773.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="816.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="869.0" layoutY="635.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="912.0" layoutY="635.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="963.0" layoutY="635.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1003.0" layoutY="635.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1061.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="398.0" layoutY="653.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="439.0" layoutY="653.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="494.0" layoutY="653.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="534.0" layoutY="653.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="587.0" layoutY="651.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="627.0" layoutY="651.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="677.0" layoutY="654.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="720.0" layoutY="654.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="773.0" layoutY="654.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="816.0" layoutY="654.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="869.0" layoutY="655.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="912.0" layoutY="655.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="963.0" layoutY="655.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1003.0" layoutY="655.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1061.0" layoutY="653.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="398.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="439.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="494.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="534.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="587.0" layoutY="697.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="627.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="677.0" layoutY="697.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="720.0" layoutY="697.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="773.0" layoutY="697.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="816.0" layoutY="697.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="870.0" layoutY="698.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="963.0" layoutY="698.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1003.0" layoutY="698.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="398.0" layoutY="716.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="439.0" layoutY="716.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="494.0" layoutY="716.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="534.0" layoutY="716.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="587.0" layoutY="714.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="627.0" layoutY="714.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="677.0" layoutY="717.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="720.0" layoutY="717.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="773.0" layoutY="717.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="816.0" layoutY="717.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="870.0" layoutY="715.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="963.0" layoutY="718.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1003.0" layoutY="718.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="1056.0" layoutY="718.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="341.0" layoutY="634.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="338.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="338.0" layoutY="716.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="912.0" layoutY="696.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
-      <CheckBox layoutX="912.0" layoutY="713.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" />
+       <Pane fx:id="f0104" layoutX="495.0" layoutY="93.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0105" layoutX="495.0" layoutY="110.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0106" layoutX="495.0" layoutY="155.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0107" layoutX="495.0" layoutY="176.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0108" layoutX="535.0" layoutY="93.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0109" layoutX="535.0" layoutY="110.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0110" layoutX="535.0" layoutY="155.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0111" layoutX="535.0" layoutY="176.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0112" layoutX="681.0" layoutY="93.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0116" layoutX="719.0" layoutY="93.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0113" layoutX="681.0" layoutY="110.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0117" layoutX="719.0" layoutY="110.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0114" layoutX="681.0" layoutY="155.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0115" layoutX="681.0" layoutY="176.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0118" layoutX="719.0" layoutY="155.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0119" layoutX="719.0" layoutY="176.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0120" layoutX="870.0" layoutY="93.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0124" layoutX="913.0" layoutY="93.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0121" layoutX="870.0" layoutY="110.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0125" layoutX="913.0" layoutY="110.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0122" layoutX="870.0" layoutY="155.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0126" layoutX="913.0" layoutY="155.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0123" layoutX="870.0" layoutY="175.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0127" layoutX="913.0" layoutY="175.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0204" layoutX="497.0" layoutY="213.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0205" layoutX="497.0" layoutY="230.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0206" layoutX="497.0" layoutY="275.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0207" layoutX="497.0" layoutY="296.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0208" layoutX="537.0" layoutY="213.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0209" layoutX="537.0" layoutY="230.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0210" layoutX="537.0" layoutY="275.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0211" layoutX="537.0" layoutY="296.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0212" layoutX="683.0" layoutY="213.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0216" layoutX="721.0" layoutY="213.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0213" layoutX="683.0" layoutY="230.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0217" layoutX="721.0" layoutY="230.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0214" layoutX="683.0" layoutY="275.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0215" layoutX="683.0" layoutY="296.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0218" layoutX="721.0" layoutY="275.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0219" layoutX="721.0" layoutY="296.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0220" layoutX="872.0" layoutY="213.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0224" layoutX="912.0" layoutY="213.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0221" layoutX="872.0" layoutY="230.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0225" layoutX="912.0" layoutY="232.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0222" layoutX="872.0" layoutY="275.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0226" layoutX="912.0" layoutY="275.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0223" layoutX="872.0" layoutY="294.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0227" layoutX="912.0" layoutY="294.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0128" layoutX="1061.0" layoutY="93.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0129" layoutX="1061.0" layoutY="110.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0102" layoutX="339.0" layoutY="155.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0103" layoutX="339.0" layoutY="176.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0101" layoutX="344.0" layoutY="92.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0130" layoutX="1060.0" layoutY="176.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0202" layoutX="339.0" layoutY="274.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0203" layoutX="339.0" layoutY="295.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0201" layoutX="344.0" layoutY="212.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0228" layoutX="1061.0" layoutY="213.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0229" layoutX="1061.0" layoutY="230.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="f0230" layoutX="1060.0" layoutY="296.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0104" layoutX="399.0" layoutY="376.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0108" layoutX="440.0" layoutY="376.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0112" layoutX="495.0" layoutY="376.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0116" layoutX="535.0" layoutY="376.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0120" layoutX="588.0" layoutY="377.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0124" layoutX="628.0" layoutY="376.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0128" layoutX="678.0" layoutY="377.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0132" layoutX="721.0" layoutY="377.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0136" layoutX="774.0" layoutY="377.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0140" layoutX="817.0" layoutY="377.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0144" layoutX="870.0" layoutY="378.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0148" layoutX="913.0" layoutY="378.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0152" layoutX="964.0" layoutY="378.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0156" layoutX="1004.0" layoutY="378.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0160" layoutX="1062.0" layoutY="377.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0105" layoutX="399.0" layoutY="396.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0109" layoutX="440.0" layoutY="396.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0113" layoutX="495.0" layoutY="396.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0117" layoutX="535.0" layoutY="396.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0121" layoutX="588.0" layoutY="394.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0125" layoutX="628.0" layoutY="394.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0129" layoutX="678.0" layoutY="397.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0133" layoutX="721.0" layoutY="397.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0137" layoutX="774.0" layoutY="397.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0141" layoutX="817.0" layoutY="397.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0145" layoutX="870.0" layoutY="398.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0149" layoutX="913.0" layoutY="398.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0153" layoutX="964.0" layoutY="398.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0157" layoutX="1004.0" layoutY="398.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0161" layoutX="1062.0" layoutY="396.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0106" layoutX="399.0" layoutY="439.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0110" layoutX="440.0" layoutY="439.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0114" layoutX="495.0" layoutY="439.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0118" layoutX="535.0" layoutY="439.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0122" layoutX="588.0" layoutY="440.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0126" layoutX="628.0" layoutY="439.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0130" layoutX="678.0" layoutY="440.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0134" layoutX="721.0" layoutY="440.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0138" layoutX="774.0" layoutY="440.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0142" layoutX="817.0" layoutY="440.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0146" layoutX="870.0" layoutY="441.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0150" layoutX="913.0" layoutY="441.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0154" layoutX="964.0" layoutY="441.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0158" layoutX="1004.0" layoutY="441.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0107" layoutX="399.0" layoutY="459.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0111" layoutX="440.0" layoutY="459.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0115" layoutX="495.0" layoutY="459.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0119" layoutX="535.0" layoutY="459.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0123" layoutX="588.0" layoutY="457.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0127" layoutX="628.0" layoutY="457.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0131" layoutX="678.0" layoutY="460.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0135" layoutX="721.0" layoutY="460.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0139" layoutX="774.0" layoutY="460.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0143" layoutX="817.0" layoutY="460.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0147" layoutX="870.0" layoutY="459.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0151" layoutX="913.0" layoutY="459.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0155" layoutX="964.0" layoutY="461.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0159" layoutX="1004.0" layoutY="461.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0162" layoutX="1057.0" layoutY="461.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0101" layoutX="342.0" layoutY="377.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0102" layoutX="339.0" layoutY="439.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0103" layoutX="339.0" layoutY="459.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0204" layoutX="398.0" layoutY="507.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0208" layoutX="439.0" layoutY="507.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0212" layoutX="494.0" layoutY="507.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0216" layoutX="534.0" layoutY="507.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0220" layoutX="587.0" layoutY="508.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0224" layoutX="627.0" layoutY="507.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0228" layoutX="677.0" layoutY="508.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0232" layoutX="720.0" layoutY="508.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0236" layoutX="773.0" layoutY="508.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0240" layoutX="816.0" layoutY="508.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0244" layoutX="869.0" layoutY="509.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0248" layoutX="912.0" layoutY="509.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0252" layoutX="963.0" layoutY="509.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0256" layoutX="1003.0" layoutY="509.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0260" layoutX="1061.0" layoutY="508.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0205" layoutX="398.0" layoutY="527.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0209" layoutX="439.0" layoutY="527.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0213" layoutX="494.0" layoutY="527.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0217" layoutX="534.0" layoutY="527.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0221" layoutX="587.0" layoutY="525.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0225" layoutX="627.0" layoutY="525.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0229" layoutX="677.0" layoutY="528.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0233" layoutX="720.0" layoutY="528.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0237" layoutX="773.0" layoutY="528.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0241" layoutX="816.0" layoutY="528.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0245" layoutX="869.0" layoutY="529.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0249" layoutX="912.0" layoutY="529.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0253" layoutX="963.0" layoutY="529.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0257" layoutX="1003.0" layoutY="529.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0261" layoutX="1061.0" layoutY="527.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0206" layoutX="398.0" layoutY="570.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0210" layoutX="439.0" layoutY="570.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0214" layoutX="494.0" layoutY="570.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0218" layoutX="534.0" layoutY="570.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0222" layoutX="587.0" layoutY="571.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0226" layoutX="627.0" layoutY="570.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0230" layoutX="677.0" layoutY="571.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0234" layoutX="720.0" layoutY="571.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0238" layoutX="773.0" layoutY="571.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0242" layoutX="816.0" layoutY="571.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0246" layoutX="869.0" layoutY="572.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0250" layoutX="912.0" layoutY="572.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0254" layoutX="964.0" layoutY="571.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0258" layoutX="1003.0" layoutY="572.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0207" layoutX="398.0" layoutY="590.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0211" layoutX="439.0" layoutY="590.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0215" layoutX="494.0" layoutY="590.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0219" layoutX="534.0" layoutY="590.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0223" layoutX="587.0" layoutY="588.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0227" layoutX="627.0" layoutY="588.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0231" layoutX="677.0" layoutY="591.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0235" layoutX="720.0" layoutY="591.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0239" layoutX="773.0" layoutY="591.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0243" layoutX="816.0" layoutY="591.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0247" layoutX="869.0" layoutY="589.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0251" layoutX="912.0" layoutY="589.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0255" layoutX="964.0" layoutY="591.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0259" layoutX="1003.0" layoutY="592.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0262" layoutX="1057.0" layoutY="591.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0201" layoutX="341.0" layoutY="508.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0202" layoutX="338.0" layoutY="570.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0203" layoutX="338.0" layoutY="590.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0304" layoutX="398.0" layoutY="633.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0308" layoutX="439.0" layoutY="633.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0312" layoutX="494.0" layoutY="633.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0316" layoutX="534.0" layoutY="633.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0320" layoutX="587.0" layoutY="634.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0324" layoutX="627.0" layoutY="633.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0328" layoutX="677.0" layoutY="634.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0332" layoutX="720.0" layoutY="634.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0336" layoutX="773.0" layoutY="634.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0340" layoutX="816.0" layoutY="634.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0344" layoutX="869.0" layoutY="635.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0348" layoutX="912.0" layoutY="635.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0352" layoutX="963.0" layoutY="635.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0356" layoutX="1003.0" layoutY="635.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0360" layoutX="1061.0" layoutY="634.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0305" layoutX="398.0" layoutY="653.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0309" layoutX="439.0" layoutY="653.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0313" layoutX="494.0" layoutY="653.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0317" layoutX="534.0" layoutY="653.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0321" layoutX="587.0" layoutY="651.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0325" layoutX="627.0" layoutY="651.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0329" layoutX="677.0" layoutY="654.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0333" layoutX="720.0" layoutY="654.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0337" layoutX="773.0" layoutY="654.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0341" layoutX="816.0" layoutY="654.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0345" layoutX="869.0" layoutY="655.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0349" layoutX="912.0" layoutY="655.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0353" layoutX="963.0" layoutY="655.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0357" layoutX="1003.0" layoutY="655.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0361" layoutX="1061.0" layoutY="653.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0306" layoutX="398.0" layoutY="696.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0310" layoutX="439.0" layoutY="696.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0314" layoutX="494.0" layoutY="696.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0318" layoutX="534.0" layoutY="696.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0322" layoutX="587.0" layoutY="697.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0326" layoutX="627.0" layoutY="696.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0330" layoutX="677.0" layoutY="697.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0334" layoutX="720.0" layoutY="697.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0338" layoutX="773.0" layoutY="697.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0342" layoutX="816.0" layoutY="697.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0346" layoutX="870.0" layoutY="698.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0354" layoutX="963.0" layoutY="698.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0358" layoutX="1003.0" layoutY="698.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0307" layoutX="398.0" layoutY="716.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0311" layoutX="439.0" layoutY="716.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0315" layoutX="494.0" layoutY="716.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0319" layoutX="534.0" layoutY="716.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0323" layoutX="587.0" layoutY="714.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0327" layoutX="627.0" layoutY="714.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0331" layoutX="677.0" layoutY="717.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0335" layoutX="720.0" layoutY="717.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0339" layoutX="773.0" layoutY="717.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0343" layoutX="816.0" layoutY="717.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0347" layoutX="870.0" layoutY="715.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0355" layoutX="963.0" layoutY="718.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0359" layoutX="1003.0" layoutY="718.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0362" layoutX="1056.0" layoutY="718.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0301" layoutX="341.0" layoutY="634.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0302" layoutX="338.0" layoutY="696.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0303" layoutX="338.0" layoutY="716.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0350" layoutX="912.0" layoutY="696.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <Pane fx:id="s0351" layoutX="912.0" layoutY="713.0" onMouseClicked="#clickedOnSeat" prefHeight="17.0" prefWidth="14.0" scaleX="1.6" style="-fx-background-color: LawnGreen;" />
+       <fx:define>
+           <ArrayList fx:id="seatsList">
+               <fx:reference source="f0104"/>
+               <fx:reference source="f0105"/>
+               <fx:reference source="f0106"/>
+               <fx:reference source="f0107"/>
+               <fx:reference source="f0108"/>
+               <fx:reference source="f0109"/>
+               <fx:reference source="f0110"/>
+               <fx:reference source="f0111"/>
+               <fx:reference source="f0112"/>
+               <fx:reference source="f0116"/>
+               <fx:reference source="f0113"/>
+               <fx:reference source="f0117"/>
+               <fx:reference source="f0114"/>
+               <fx:reference source="f0115"/>
+               <fx:reference source="f0118"/>
+               <fx:reference source="f0119"/>
+               <fx:reference source="f0120"/>
+               <fx:reference source="f0124"/>
+               <fx:reference source="f0121"/>
+               <fx:reference source="f0125"/>
+               <fx:reference source="f0122"/>
+               <fx:reference source="f0126"/>
+               <fx:reference source="f0123"/>
+               <fx:reference source="f0127"/>
+               <fx:reference source="f0204"/>
+               <fx:reference source="f0205"/>
+               <fx:reference source="f0206"/>
+               <fx:reference source="f0207"/>
+               <fx:reference source="f0208"/>
+               <fx:reference source="f0209"/>
+               <fx:reference source="f0210"/>
+               <fx:reference source="f0211"/>
+               <fx:reference source="f0212"/>
+               <fx:reference source="f0216"/>
+               <fx:reference source="f0213"/>
+               <fx:reference source="f0217"/>
+               <fx:reference source="f0214"/>
+               <fx:reference source="f0215"/>
+               <fx:reference source="f0218"/>
+               <fx:reference source="f0219"/>
+               <fx:reference source="f0220"/>
+               <fx:reference source="f0224"/>
+               <fx:reference source="f0221"/>
+               <fx:reference source="f0225"/>
+               <fx:reference source="f0222"/>
+               <fx:reference source="f0226"/>
+               <fx:reference source="f0223"/>
+               <fx:reference source="f0227"/>
+               <fx:reference source="f0128"/>
+               <fx:reference source="f0129"/>
+               <fx:reference source="f0102"/>
+               <fx:reference source="f0103"/>
+               <fx:reference source="f0101"/>
+               <fx:reference source="f0130"/>
+               <fx:reference source="f0202"/>
+               <fx:reference source="f0203"/>
+               <fx:reference source="f0201"/>
+               <fx:reference source="f0228"/>
+               <fx:reference source="f0229"/>
+               <fx:reference source="f0230"/>
+               <fx:reference source="s0104"/>
+               <fx:reference source="s0108"/>
+               <fx:reference source="s0112"/>
+               <fx:reference source="s0116"/>
+               <fx:reference source="s0120"/>
+               <fx:reference source="s0124"/>
+               <fx:reference source="s0128"/>
+               <fx:reference source="s0132"/>
+               <fx:reference source="s0136"/>
+               <fx:reference source="s0140"/>
+               <fx:reference source="s0144"/>
+               <fx:reference source="s0148"/>
+               <fx:reference source="s0152"/>
+               <fx:reference source="s0156"/>
+               <fx:reference source="s0160"/>
+               <fx:reference source="s0105"/>
+               <fx:reference source="s0109"/>
+               <fx:reference source="s0113"/>
+               <fx:reference source="s0117"/>
+               <fx:reference source="s0121"/>
+               <fx:reference source="s0125"/>
+               <fx:reference source="s0129"/>
+               <fx:reference source="s0133"/>
+               <fx:reference source="s0137"/>
+               <fx:reference source="s0141"/>
+               <fx:reference source="s0145"/>
+               <fx:reference source="s0149"/>
+               <fx:reference source="s0153"/>
+               <fx:reference source="s0157"/>
+               <fx:reference source="s0161"/>
+               <fx:reference source="s0106"/>
+               <fx:reference source="s0110"/>
+               <fx:reference source="s0114"/>
+               <fx:reference source="s0118"/>
+               <fx:reference source="s0122"/>
+               <fx:reference source="s0126"/>
+               <fx:reference source="s0130"/>
+               <fx:reference source="s0134"/>
+               <fx:reference source="s0138"/>
+               <fx:reference source="s0142"/>
+               <fx:reference source="s0146"/>
+               <fx:reference source="s0150"/>
+               <fx:reference source="s0154"/>
+               <fx:reference source="s0158"/>
+               <fx:reference source="s0107"/>
+               <fx:reference source="s0111"/>
+               <fx:reference source="s0115"/>
+               <fx:reference source="s0119"/>
+               <fx:reference source="s0123"/>
+               <fx:reference source="s0127"/>
+               <fx:reference source="s0131"/>
+               <fx:reference source="s0135"/>
+               <fx:reference source="s0139"/>
+               <fx:reference source="s0143"/>
+               <fx:reference source="s0147"/>
+               <fx:reference source="s0151"/>
+               <fx:reference source="s0155"/>
+               <fx:reference source="s0159"/>
+               <fx:reference source="s0162"/>
+               <fx:reference source="s0101"/>
+               <fx:reference source="s0102"/>
+               <fx:reference source="s0103"/>
+               <fx:reference source="s0204"/>
+               <fx:reference source="s0208"/>
+               <fx:reference source="s0212"/>
+               <fx:reference source="s0216"/>
+               <fx:reference source="s0220"/>
+               <fx:reference source="s0224"/>
+               <fx:reference source="s0228"/>
+               <fx:reference source="s0232"/>
+               <fx:reference source="s0236"/>
+               <fx:reference source="s0240"/>
+               <fx:reference source="s0244"/>
+               <fx:reference source="s0248"/>
+               <fx:reference source="s0252"/>
+               <fx:reference source="s0256"/>
+               <fx:reference source="s0260"/>
+               <fx:reference source="s0205"/>
+               <fx:reference source="s0209"/>
+               <fx:reference source="s0213"/>
+               <fx:reference source="s0217"/>
+               <fx:reference source="s0221"/>
+               <fx:reference source="s0225"/>
+               <fx:reference source="s0229"/>
+               <fx:reference source="s0233"/>
+               <fx:reference source="s0237"/>
+               <fx:reference source="s0241"/>
+               <fx:reference source="s0245"/>
+               <fx:reference source="s0249"/>
+               <fx:reference source="s0253"/>
+               <fx:reference source="s0257"/>
+               <fx:reference source="s0261"/>
+               <fx:reference source="s0206"/>
+               <fx:reference source="s0210"/>
+               <fx:reference source="s0214"/>
+               <fx:reference source="s0218"/>
+               <fx:reference source="s0222"/>
+               <fx:reference source="s0226"/>
+               <fx:reference source="s0230"/>
+               <fx:reference source="s0234"/>
+               <fx:reference source="s0238"/>
+               <fx:reference source="s0242"/>
+               <fx:reference source="s0246"/>
+               <fx:reference source="s0250"/>
+               <fx:reference source="s0254"/>
+               <fx:reference source="s0258"/>
+               <fx:reference source="s0207"/>
+               <fx:reference source="s0211"/>
+               <fx:reference source="s0215"/>
+               <fx:reference source="s0219"/>
+               <fx:reference source="s0223"/>
+               <fx:reference source="s0227"/>
+               <fx:reference source="s0231"/>
+               <fx:reference source="s0235"/>
+               <fx:reference source="s0239"/>
+               <fx:reference source="s0243"/>
+               <fx:reference source="s0247"/>
+               <fx:reference source="s0251"/>
+               <fx:reference source="s0255"/>
+               <fx:reference source="s0259"/>
+               <fx:reference source="s0262"/>
+               <fx:reference source="s0201"/>
+               <fx:reference source="s0202"/>
+               <fx:reference source="s0203"/>
+               <fx:reference source="s0304"/>
+               <fx:reference source="s0308"/>
+               <fx:reference source="s0312"/>
+               <fx:reference source="s0316"/>
+               <fx:reference source="s0320"/>
+               <fx:reference source="s0324"/>
+               <fx:reference source="s0328"/>
+               <fx:reference source="s0332"/>
+               <fx:reference source="s0336"/>
+               <fx:reference source="s0340"/>
+               <fx:reference source="s0344"/>
+               <fx:reference source="s0348"/>
+               <fx:reference source="s0352"/>
+               <fx:reference source="s0356"/>
+               <fx:reference source="s0360"/>
+               <fx:reference source="s0305"/>
+               <fx:reference source="s0309"/>
+               <fx:reference source="s0313"/>
+               <fx:reference source="s0317"/>
+               <fx:reference source="s0321"/>
+               <fx:reference source="s0325"/>
+               <fx:reference source="s0329"/>
+               <fx:reference source="s0333"/>
+               <fx:reference source="s0337"/>
+               <fx:reference source="s0341"/>
+               <fx:reference source="s0345"/>
+               <fx:reference source="s0349"/>
+               <fx:reference source="s0353"/>
+               <fx:reference source="s0357"/>
+               <fx:reference source="s0361"/>
+               <fx:reference source="s0306"/>
+               <fx:reference source="s0310"/>
+               <fx:reference source="s0314"/>
+               <fx:reference source="s0318"/>
+               <fx:reference source="s0322"/>
+               <fx:reference source="s0326"/>
+               <fx:reference source="s0330"/>
+               <fx:reference source="s0334"/>
+               <fx:reference source="s0338"/>
+               <fx:reference source="s0342"/>
+               <fx:reference source="s0346"/>
+               <fx:reference source="s0354"/>
+               <fx:reference source="s0358"/>
+               <fx:reference source="s0307"/>
+               <fx:reference source="s0311"/>
+               <fx:reference source="s0315"/>
+               <fx:reference source="s0319"/>
+               <fx:reference source="s0323"/>
+               <fx:reference source="s0327"/>
+               <fx:reference source="s0331"/>
+               <fx:reference source="s0335"/>
+               <fx:reference source="s0339"/>
+               <fx:reference source="s0343"/>
+               <fx:reference source="s0347"/>
+               <fx:reference source="s0355"/>
+               <fx:reference source="s0359"/>
+               <fx:reference source="s0362"/>
+               <fx:reference source="s0301"/>
+               <fx:reference source="s0302"/>
+               <fx:reference source="s0303"/>
+               <fx:reference source="s0350"/>
+               <fx:reference source="s0351"/>
+           </ArrayList>
+       </fx:define>
    </children>
 </Pane>

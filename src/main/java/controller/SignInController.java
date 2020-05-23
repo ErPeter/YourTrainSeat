@@ -13,6 +13,7 @@ import java.io.IOException;
 
 
 public class SignInController {
+
     @FXML
     private TextField userName;
 
@@ -25,4 +26,13 @@ public class SignInController {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    public void switchToTrainCoachView(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/trainCoach.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }

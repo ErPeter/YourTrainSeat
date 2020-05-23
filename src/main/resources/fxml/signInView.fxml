@@ -13,7 +13,7 @@
       <Pane layoutX="150.0" layoutY="153.0" prefHeight="227.0" prefWidth="340.0" style="-fx-background-color: #FAEBD7; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
          <children>
             <TextField fx:id="userName" layoutX="151.0" layoutY="53.0" />
-            <Button layoutX="52.0" layoutY="165.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Sign in" />
+            <Button layoutX="52.0" layoutY="165.0" onAction="#switchToTrainCoachView" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Sign in" />
             <Button layoutX="181.0" layoutY="165.0" onAction="#switchToRegView" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Register" />
             <Label fx:id="unText" layoutX="41.0" layoutY="48.0" lineSpacing="1.0" prefHeight="34.0" prefWidth="89.0" text="User Name :" wrapText="true">
                <font>
@@ -31,7 +31,7 @@
       </Pane>
       <Label fx:id="signInText" layoutX="137.0" layoutY="65.0" text="Sign in to your account">
          <font>
-            <Font name="Arial" size="36.0" />
+            <Font name="Arial" size="36.0"/>
          </font>
       </Label>
    </children>

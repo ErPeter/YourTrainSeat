@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class MyApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(Main.class.getResource("/fxml/trainCoach.fxml"));
+        Parent root = FXMLLoader.load(Main.class.getResource("/fxml/signInView.fxml"));
         stage.setTitle("Take a seat");
         stage.setResizable(false);
         stage.setScene(new Scene(root));
