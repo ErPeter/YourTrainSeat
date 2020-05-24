@@ -2,6 +2,9 @@ package yourtrainseat;
 
 import javafx.scene.layout.Pane;
 import lombok.Setter;
+import persons.Person;
+import persons.PersonDao;
+import train.TrainDao;
 
 import java.util.List;
 
@@ -10,7 +13,12 @@ import java.util.List;
  */
 
 public class TrainCoach {
-
+    @Setter
+    private String activeUser;
+    private PersonDao personDao = new PersonDao();
+    private TrainDao trainDao = new TrainDao();
+    private Person person;
+    private String personsSeats = ",";
 
     @Setter
     private List<Pane> seats;
@@ -19,9 +27,14 @@ public class TrainCoach {
      * Method witch changes the colour of the seat
      */
     public void changeToReservedColor(){
+        person = personDao.findPerson(activeUser);
+        person.setSeats(null);
+        personDao.update(person);
         for (Pane pane : seats){
-            if (pane.getId().equals("s0131")){
-                pane.setStyle("-fx-background-color:  #548ef3");
+            if (pane.getStyle().compareTo("-fx-background-color:  #548ef3") == 0){
+                personsSeats = personsSeats + pane.getId() + " , ";
+                person.setSeats(personsSeats);
+                personDao.update(person);
             }
         }
     }

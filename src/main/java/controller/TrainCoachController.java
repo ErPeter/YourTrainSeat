@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -29,12 +30,15 @@ public class TrainCoachController {
     @FXML
     private List<Pane> seatsList;
 
+    @FXML
+    private Button saveButton;
+
     public void initialize(){
         setUserNameLabel();
+        trainCoach.setActiveUser(ActiveUser.getUserName());
     }
 
     public void setUserNameLabel(){
-        ActiveUser user = new ActiveUser();
         userName.setText(ActiveUser.getUserName());
     }
 
@@ -47,6 +51,7 @@ public class TrainCoachController {
     public void saveButton(){
         trainCoach.setSeats(seatsList);
         trainCoach.changeToReservedColor();
+        saveButton.setVisible(false);
     }
 
     public void logOut(ActionEvent event) throws IOException {
