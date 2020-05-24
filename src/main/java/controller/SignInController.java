@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import persons.ActiveUser;
 import yourtrainseat.SignIn;
 
 import java.io.IOException;
@@ -16,6 +17,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class SignInController {
 
+    private TrainCoachController trainCoachController = new TrainCoachController();
     private SignIn signIn = new SignIn();
 
     @FXML
@@ -34,6 +36,8 @@ public class SignInController {
     public void switchToTrainCoachView(ActionEvent event) throws IOException, NoSuchAlgorithmException {
         setSignInValues();
         if(signIn.successfulLogin()) {
+            ActiveUser user = new ActiveUser();
+            ActiveUser.setUserName(userName.getText());
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/trainCoach.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);

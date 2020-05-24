@@ -11,6 +11,7 @@ import java.util.List;
 
 public class TrainCoach {
 
+
     @Setter
     private List<Pane> seats;
 
@@ -20,7 +21,7 @@ public class TrainCoach {
     public void changeToReservedColor(){
         for (Pane pane : seats){
             if (pane.getId().equals("s0131")){
-                pane.setStyle("-fx-background-color:  #F35454");
+                pane.setStyle("-fx-background-color:  #548ef3");
             }
         }
     }
@@ -31,7 +32,7 @@ public class TrainCoach {
      */
     public void reserveSeat(Pane pane){
         if (isReserved(pane)) {
-            pane.setStyle("-fx-background-color:  #f35454");
+            pane.setStyle("-fx-background-color:  #548ef3");
         }
         else {
             System.out.println("Already reserved");
@@ -44,7 +45,7 @@ public class TrainCoach {
      * @return
      */
     public boolean isReserved(Pane pane){
-        if (pane.getStyle().equals("-fx-background-color:  #F35454")){
+        if (pane.getStyle().equals("-fx-background-color:  #548ef3")){
             return false;
         }
         return true;
