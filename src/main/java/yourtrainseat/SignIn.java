@@ -5,11 +5,10 @@ import persons.Password;
 import persons.Person;
 import persons.PersonDao;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 /**
- * Class to handel the person who is signing in
+ * Class to handel the person who is signing in.
  */
 
 @Data
@@ -23,6 +22,10 @@ public class SignIn {
     private List<Person> personList = (new PersonDao().findAll());
 
 
+    /**
+     * Finds the person whit the given name.
+     * @return true if found the person with name
+     */
     private boolean userNameMatch() {
         for (int i = 0; i < personList.size(); i++) {
             if (personList.get(i).getUserName().compareTo(personName) == 0) {
@@ -33,21 +36,24 @@ public class SignIn {
         return false;
     }
 
-    private boolean passwordMatch() throws NoSuchAlgorithmException {
+    /**
+     * Checks if the password is correct.
+     * @return true if it's matched
+     */
+    private boolean passwordMatch() {
         password.setPassword(pwd);
         hashedPassword = password.getSecretPassword();
 
-        if(this.foundPerson.getPassword().compareTo(hashedPassword) == 0){
-            return true;
-        }
-        return false;
+        return this.foundPerson.getPassword().compareTo(hashedPassword) == 0;
     }
 
-    public boolean successfulLogin() throws NoSuchAlgorithmException {
+    /**
+     * Checks if the username is correct and the password is correct.
+     * @return true if all condition are matched
+     */
+    public boolean successfulLogin() {
         if(userNameMatch()){
-            if(passwordMatch()){
-                return true;
-            }
+            return passwordMatch();
         }
         return false;
     }

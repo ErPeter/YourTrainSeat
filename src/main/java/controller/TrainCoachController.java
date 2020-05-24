@@ -33,13 +33,26 @@ public class TrainCoachController {
     @FXML
     private Button saveButton;
 
+    @FXML
+    private Button adminButton;
+
     public void initialize(){
+        trainCoach.setSeats(seatsList);
         setUserNameLabel();
         trainCoach.setActiveUser(ActiveUser.getUserName());
+        trainCoach.checkReservedSeats();
+        if (trainCoach.isAdmin()){
+            adminButton.setVisible(true);
+        }
     }
 
     public void setUserNameLabel(){
         userName.setText(ActiveUser.getUserName());
+    }
+
+    public void adminAction(){
+        trainCoach.startTrain();
+        trainCoach.setSeatsToFree();
     }
 
     public void clickedOnSeat(MouseEvent mouseEvent){
@@ -48,8 +61,7 @@ public class TrainCoachController {
         trainCoach.reserveSeat(pane);
     }
 
-    public void saveButton(){
-        trainCoach.setSeats(seatsList);
+    public void saveButton() throws InterruptedException {
         trainCoach.changeToReservedColor();
         saveButton.setVisible(false);
     }
@@ -61,6 +73,7 @@ public class TrainCoachController {
         stage.setScene(scene);
         stage.show();
     }
+
 
     public List<Pane> getSeatsList() {
         return seatsList;

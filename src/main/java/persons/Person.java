@@ -11,7 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Class to represent a person
+ * Class to represent a person.
  */
 
 @Data

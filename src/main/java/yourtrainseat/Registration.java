@@ -6,8 +6,11 @@ import persons.Password;
 import persons.Person;
 import persons.PersonDao;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
+
+/**
+ * Class to handle registration.
+ */
 
 public class Registration {
     @Setter
@@ -24,6 +27,11 @@ public class Registration {
     boolean nameProblem = false;
 
 
+    /**
+     * Checks the uniqueness of a person's name.
+     * @param person will be checked with all the other person in the database
+     * @return true if it is unique or false if it is not
+     */
     private boolean isUnique(Person person){
         this.nameProblem = false;
         boolean unique = true;
@@ -36,6 +44,10 @@ public class Registration {
         return unique;
     }
 
+    /**
+     * Checks the password and the repeated password.
+     * @return true if they are the same or false if they are different
+     */
     private boolean isPasswordsMatch(){
         this.passwordProblem = false;
         if(this.givenPsw.compareTo(this.repeatOfGivenPsw) == 0){
@@ -45,12 +57,19 @@ public class Registration {
         return false;
     }
 
-    private void hashPsw(String psw) throws NoSuchAlgorithmException {
+    /**
+     * Hashes the password with setPassword method from {@link Password} class.
+     * @param psw this String will be hashed
+     */
+    private void hashPsw(String psw) {
         password.setPassword(psw);
         this.person.setPassword(password.getSecretPassword());
     }
 
-    private void setPersonPassword() throws NoSuchAlgorithmException {
+    /**
+     * If condition is matched then hashes password.
+     */
+    private void setPersonPassword() {
         if(isPasswordsMatch() == true){
             hashPsw(this.givenPsw);
         }
@@ -59,7 +78,11 @@ public class Registration {
         }
     }
 
-    public void insertPerson() throws NoSuchAlgorithmException {
+    /**
+     * If the person's user name is unique and passwords are the same, inserts the person to database.
+     * The hashed password will be stored
+     */
+    public void insertPerson() {
         if(isUnique(person) && isPasswordsMatch()){
             setPersonPassword();
             PersonDao personDao = new PersonDao();
