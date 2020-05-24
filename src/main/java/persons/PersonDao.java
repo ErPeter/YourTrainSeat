@@ -1,4 +1,4 @@
-package yourtrainseat;
+package persons;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

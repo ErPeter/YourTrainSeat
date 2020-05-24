@@ -2,6 +2,9 @@ package yourtrainseat;
 
 import lombok.Getter;
 import lombok.Setter;
+import persons.Password;
+import persons.Person;
+import persons.PersonDao;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.List;

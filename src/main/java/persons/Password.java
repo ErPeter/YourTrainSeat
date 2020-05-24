@@ -1,4 +1,4 @@
-package yourtrainseat;
+package persons;
 
 /**
  * Class to create safe passwords

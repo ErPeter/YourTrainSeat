@@ -1,4 +1,4 @@
-package yourtrainseat;
+package persons;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
