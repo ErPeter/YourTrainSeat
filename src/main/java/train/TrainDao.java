@@ -1,5 +1,7 @@
 package train;
 
+import org.tinylog.Logger;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -21,6 +23,7 @@ public class TrainDao {
         entityManager.getTransaction().begin();
         entityManager.persist(train);
         entityManager.getTransaction().commit();
+        Logger.info("Added train to database");
     }
 
     /**
@@ -30,6 +33,7 @@ public class TrainDao {
         entityManager.getTransaction().begin();
         entityManager.createQuery("delete from Train").executeUpdate();
         entityManager.getTransaction().commit();
+        Logger.info("deleted all record from Train");
     }
 
     /**
@@ -37,6 +41,7 @@ public class TrainDao {
      * @return found records with a list
      */
     public List<Train> findAll(){
+        Logger.info("Finding all seats");
         return entityManager.createQuery("SELECT a FROM Train a", Train.class).getResultList();
     }
 }

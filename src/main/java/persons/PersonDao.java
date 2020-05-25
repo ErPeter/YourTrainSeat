@@ -1,5 +1,7 @@
 package persons;
 
+import org.tinylog.Logger;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -24,6 +26,7 @@ public class PersonDao {
         em.getTransaction().begin();
         em.persist(person);
         em.getTransaction().commit();
+        Logger.info("Added a person");
     }
 
     /**
@@ -34,6 +37,7 @@ public class PersonDao {
     public Person findPerson(String userName) {
         Query query = em.createQuery("select p from Person p where p.userName = :userName", Person.class);
         query.setParameter("userName", userName);
+        Logger.info("Found person");
         return (Person) query.getSingleResult();
     }
 
@@ -45,6 +49,7 @@ public class PersonDao {
         em.getTransaction().begin();
         em.merge(person);
         em.getTransaction().commit();
+        Logger.info("Updated a person");
     }
 
     /**
